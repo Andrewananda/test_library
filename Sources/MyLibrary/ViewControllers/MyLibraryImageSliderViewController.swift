@@ -28,7 +28,7 @@ public class MyLibraryDynamicDialog: LibraryBaseViewController {
     public var _navigationController: UINavigationController?
     
     init() {
-        super.init(nibName: "MyLibraryImageSliderViewController", bundle: nil)
+        super.init(nibName: "MyLibraryImageSliderViewController", bundle: Bundle.main)
     }
 
     public final override func viewDidLoad() {
@@ -59,16 +59,12 @@ public class MyLibraryDynamicDialog: LibraryBaseViewController {
     
     func show() {
         
-        if let nvc = _navigationController {
-            nvc.pushViewController(self, animated: false)
-        }
-        /*
         if #available(iOS 13, *) {
             UIApplication.shared.windows.first?.rootViewController?.present(self, animated: true, completion: nil)
         } else {
             UIApplication.shared.keyWindow?.rootViewController!.present(self, animated: true, completion: nil)
         }
-         */
+         
     }
     
     func setupTitle() {
