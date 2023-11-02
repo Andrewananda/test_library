@@ -8,7 +8,7 @@
 import UIKit
 
 
-public final protocol DynamicDialogDelegate {
+public protocol DynamicDialogDelegate {
     func selectedDynamicItemFromTable(selectedTitle: String)
 }
 

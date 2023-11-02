@@ -5,7 +5,7 @@ import UIKit
 
 
 
-public final class MyLibrary: DynamicDialogDelegate {
+public class MyLibrary: DynamicDialogDelegate {
     
     public func selectedDynamicItemFromTable(selectedTitle: String) {
         delegate?.selectedDynamicItemFromTable(selectedTitle: selectedTitle)
