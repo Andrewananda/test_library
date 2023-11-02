@@ -2,8 +2,17 @@
 // https://docs.swift.org/swift-book
 import UIKit
 
-public final class MyLibrary {
+
+
+
+public final class MyLibrary: DynamicDialogDelegate {
     
+    public func selectedDynamicItemFromTable(selectedTitle: String) {
+        delegate?.selectedDynamicItemFromTable(selectedTitle: selectedTitle)
+    }
+    
+    
+    public var delegate: DynamicDialogDelegate?
     
     public init() {
         
@@ -14,6 +23,7 @@ public final class MyLibrary {
             let vc = MyLibraryDynamicDialog()
             vc.filterTitle = title
             vc.filteredData = dataArr
+            vc.delegate = self
             navigator.present(vc, animated: false)
         }
         
