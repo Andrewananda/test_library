@@ -1,5 +1,5 @@
 //
-//  MyLibraryImageSliderViewController.swift
+//  MyLibraryDynamicDialogViewController.swift
 //  
 //
 //  Created by AndrewAnanda on 02/11/2023.
@@ -7,31 +7,24 @@
 
 import UIKit
 
-
 public protocol DynamicDialogDelegate {
     func selectedDynamicItemFromTable(selectedTitle: String)
 }
 
-
-public class MyLibraryDynamicDialog: LibraryBaseViewController {
-
+public class MyLibraryDynamicDialogViewController: LibraryBaseViewController {
+    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var txtSearch: UITextField!
     
     
-    //MARK: properties
     public var filteredData = [String]()
     public var filteredSuggestions = [String]()
     public var filterTitle = ""
     var delegate: DynamicDialogDelegate?
-    public var _navigationController: UINavigationController?
     
-    init() {
-        super.init(nibName: "MyLibraryImageSliderViewController", bundle: Bundle.main)
-    }
 
-    public final override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         
         setupTable()
@@ -39,8 +32,8 @@ public class MyLibraryDynamicDialog: LibraryBaseViewController {
         filteredSuggestions = filteredData
     }
     
-    override func setupViews() {
-        self.view.backgroundColor = UIColor.black.withAlphaComponent(0.6)
+    init() {
+        super.init(nibName: "MyLibraryDynamicDialogViewController", bundle: Bundle.main)
     }
     
     private func setupTable() {
@@ -67,15 +60,13 @@ public class MyLibraryDynamicDialog: LibraryBaseViewController {
          
     }
     
-    func setupTitle() {
-        lblTitle.text = filterTitle
-    }
     
 
 }
 
 
-extension MyLibraryDynamicDialog: UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
+
+extension MyLibraryDynamicDialogViewController: UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
     
     
     public final func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
