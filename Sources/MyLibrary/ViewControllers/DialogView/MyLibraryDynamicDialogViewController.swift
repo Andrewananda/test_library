@@ -33,7 +33,7 @@ public class MyLibraryDynamicDialogViewController: LibraryBaseViewController {
     }
     
     init() {
-        super.init(nibName: "MyLibraryDynamicDialogViewController", bundle: Bundle.main)
+        super.init(nibName: "MyLibraryDynamicDialogViewController", bundle: Bundle.module)
     }
     
     private func setupTable() {
