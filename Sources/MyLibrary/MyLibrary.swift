@@ -2,7 +2,12 @@
 // https://docs.swift.org/swift-book
 import UIKit
 
-public class MyLibrary {
+public final class MyLibrary {
+    
+    
+    public init() {
+        
+    }
     
     public func initializeSdk(title: String, dataArr: [String], navigator: UIViewController) {
         if let navigaion = navigator.navigationController {
