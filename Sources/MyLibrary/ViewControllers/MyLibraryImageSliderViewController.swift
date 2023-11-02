@@ -13,7 +13,7 @@ protocol DynamicDialogDelegate {
 }
 
 
-class MyLibraryDynamicDialog: LibraryBaseViewController {
+public class MyLibraryDynamicDialog: LibraryBaseViewController {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var lblTitle: UILabel!
@@ -30,7 +30,7 @@ class MyLibraryDynamicDialog: LibraryBaseViewController {
         super.init(nibName: "MyLibraryImageSliderViewController", bundle: Bundle.main)
     }
 
-    override func viewDidLoad() {
+    public final override func viewDidLoad() {
         super.viewDidLoad()
         
         setupTable()
@@ -71,7 +71,7 @@ class MyLibraryDynamicDialog: LibraryBaseViewController {
 extension MyLibraryDynamicDialog: UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
     
     
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+    public final func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         if textField == txtSearch {
             DispatchQueue.main.async {
                 let currentText = (self.txtSearch.text! as NSString).replacingCharacters(in: range, with: string)
@@ -91,17 +91,17 @@ extension MyLibraryDynamicDialog: UITableViewDelegate, UITableViewDataSource, UI
     }
     
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    public final func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return filteredSuggestions.count
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+   public final func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let item = filteredSuggestions[indexPath.row]
         delegate?.selectedDynamicItemFromTable(selectedTitle: item)
         self.dismiss(animated: true)
     }
 
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+   public final func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "suggestionCell", for: indexPath)
         cell.textLabel?.text = filteredSuggestions[indexPath.row]
         return cell
