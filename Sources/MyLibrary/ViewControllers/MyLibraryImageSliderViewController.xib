@@ -133,7 +133,7 @@
                             </userDefinedRuntimeAttributes>
                         </view>
                     </subviews>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" red="0.86136909969999997" green="0.13947770979999999" blue="0.070230550700000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <constraints>
                         <constraint firstItem="e6R-eE-pQg" firstAttribute="top" secondItem="ayN-ld-r1w" secondAttribute="top" constant="20" symbolic="YES" id="3PL-4E-DhN"/>
                         <constraint firstAttribute="bottom" secondItem="e6R-eE-pQg" secondAttribute="bottom" constant="20" symbolic="YES" id="5Rq-lU-QKj"/>
@@ -143,7 +143,7 @@
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color key="backgroundColor" red="0.86136909969999997" green="0.13947770979999999" blue="0.070230550700000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="ayN-ld-r1w" secondAttribute="bottom" constant="13" id="Klb-L2-lFI"/>
                 <constraint firstItem="ayN-ld-r1w" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="ZDL-rI-F08"/>
