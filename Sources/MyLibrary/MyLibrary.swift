@@ -18,16 +18,13 @@ public class MyLibrary: DynamicDialogDelegate {
         
     }
     
-    public func initializeSdk(title: String, dataArr: [String], navigator: UIViewController) {
-        if let navigaion = navigator.navigationController {
-            let vc = MyLibraryDynamicDialog()
-            vc.filterTitle = title
-            vc.filteredData = dataArr
-            vc.delegate = self
-            navigator.present(vc, animated: false)
-        }
-        
-        
+    public func initializeSdk(title: String, dataArr: [String]) {
+        let vc = MyLibraryDynamicDialog()
+        vc.filterTitle = title
+        vc.filteredData = dataArr
+        vc.delegate = self
+        vc.modalPresentationStyle = .custom
+        vc.show()
     }
     
     
