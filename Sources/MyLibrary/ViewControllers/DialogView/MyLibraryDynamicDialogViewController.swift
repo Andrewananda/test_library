@@ -57,17 +57,13 @@ public class MyLibraryDynamicDialogViewController: LibraryBaseViewController {
         } else {
             UIApplication.shared.keyWindow?.rootViewController!.present(self, animated: true, completion: nil)
         }
-         
     }
-    
-    
 
 }
 
 
 
 extension MyLibraryDynamicDialogViewController: UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
-    
     
     public final func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         if textField == txtSearch {
