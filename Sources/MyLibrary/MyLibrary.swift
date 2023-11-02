@@ -25,7 +25,8 @@ public class MyLibrary: DynamicDialogDelegate {
         vc.delegate = self
         vc._navigationController = viewController.navigationController
         vc.modalPresentationStyle = .custom
-        vc.show()
+//        vc.show()
+        viewController.navigationController?.pushViewController(vc, animated: false)
     }
     
     
