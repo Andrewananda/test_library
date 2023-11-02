@@ -1,12 +1,18 @@
 import XCTest
 @testable import MyLibrary
 
-final class MyLibraryTests: XCTestCase {
+class MyLibraryTests: XCTestCase {
+    
+    var model = MyLibraryDynamicDialog()
+    
+    override func setUp() {
+        model.filterTitle = "Test"
+        model.filteredData = ["First", "Second", "Third", "Forth"]
+        model.show()
+    }
+    
     func testExample() throws {
-        // XCTest Documentation
-        // https://developer.apple.com/documentation/xctest
-
-        // Defining Test Cases and Test Methods
-        // https://developer.apple.com/documentation/xctest/defining_test_cases_and_test_methods
+       
+       // XCTAssertEqual(model.lblTitle.text ?? "",  "Test")
     }
 }
