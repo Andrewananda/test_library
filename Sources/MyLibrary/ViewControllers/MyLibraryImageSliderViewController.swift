@@ -27,7 +27,7 @@ public class MyLibraryDynamicDialog: LibraryBaseViewController {
     var delegate: DynamicDialogDelegate?
     
     init() {
-        super.init(nibName: "MyLibraryImageSliderViewController", bundle: nil)
+        super.init(nibName: "MyLibraryImageSliderViewController", bundle: Bundle.main)
     }
 
     public final override func viewDidLoad() {
